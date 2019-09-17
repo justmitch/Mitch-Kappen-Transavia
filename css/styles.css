@@ -1,0 +1,105 @@
+* {
+    font-family: nexa light, sans-serif;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 214, 108, 0.9);
+}
+
+p {
+    font-family: nexa bold, sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+}
+
+h1 {
+    font-family: nexa bold, sans-serif;
+    font-size: 2em;
+    color: rgba(0, 214, 108, 0.9);
+}
+
+h2 {
+    font-family: nexa bold, sans-serif;
+    font-size: 1.5em;
+    color: #fff
+}
+
+a {
+    text-decoration: none;
+}
+
+head {
+    max-width: 100%;
+    display: flex;
+    padding-left: 15px;
+}
+
+nav{
+    max-height: 3em;
+    background-color: #fff;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0;
+    margin: 15 40 15 15;
+    font-weight: 700;
+    font-family: nexa bold;
+    font-size: 1.1em;
+    color: rgb(0, 214, 108);
+}
+
+.verhalen {
+    display: flex;
+}
+
+body {
+  background-image: url('images/achtergrondmobiel.jpg');
+}
+
+main {
+     padding: 1em;
+    flex-grow: 2;
+
+}
+
+.prijs {
+    background-color: rgba(0, 214, 108, 0.9);
+    border-radius: 7px;
+    max-width: 20em;
+    font-size: 1em;
+    padding: 1em;
+    margin: 1em auto auto auto;
+}
+
+.voorkeur p {
+    background-color: #2800A0;
+    border-radius: 7px;
+    max-width: 20em;
+    font-size: 0.8rm;
+    padding: 1em;
+    margin: 1em auto auto auto;
+    color: #fff;
+    font-family: nexa bold;
+}
+
+header {
+}
+
+.midden {
+    background-color: #fff;
+    border-radius: 7px;
+    max-width: 20em;
+    font-size: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin: auto auto auto auto;
+}
+
+input {
+    border-radius: 3px;
+    padding: .2em;
+    margin-top: .5em;
+}
