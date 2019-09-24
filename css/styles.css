@@ -5,13 +5,14 @@
     outline: none;
     margin: 0;
     padding: 0;
-    color: rgba(0, 214, 108, 0.9);
+    color: 000;
 }
 
 p {
-    font-family: nexa bold, sans-serif;
+    font-family: nexa light, sans-serif;
     font-size: 1em;
     font-weight: 100;
+    line-height: 1.5em;
 }
 
 h1 {
@@ -23,6 +24,7 @@ h1 {
 h2 {
     font-family: nexa bold, sans-serif;
     font-size: 1.5em;
+    font-size: 2em;
     color: #fff
 }
 
@@ -60,13 +62,15 @@ body {
 }
 
 main {
-     padding: 1em;
     flex-grow: 2;
+}
+
+section {
 
 }
 
 .prijs {
-    background-color: rgba(0, 214, 108, 0.9);
+    background-color: rgba(0, 214, 108, 0.7);
     border-radius: 7px;
     max-width: 20em;
     font-size: 1em;
@@ -74,18 +78,24 @@ main {
     margin: 1em auto auto auto;
 }
 
-.voorkeur p {
+.prijs p {
+    color: #fff;
+}
+
+.voorkeur {
     background-color: #2800A0;
     border-radius: 7px;
     max-width: 20em;
-    font-size: 0.8rm;
     padding: 1em;
     margin: 1em auto auto auto;
-    color: #fff;
-    font-family: nexa bold;
+}
+
+.voorkeur p {
+        color: #fff;
 }
 
 header {
+    padding: 1em;
 }
 
 .midden {
@@ -98,8 +108,48 @@ header {
     margin: auto auto auto auto;
 }
 
-input {
-    border-radius: 3px;
-    padding: .2em;
-    margin-top: .5em;
+button {
+    border-radius: 1.25em;
+    min-height: 1.5rem;
+    min-height: 1.5rem;
+    color: white;
+    background-color: #ff3268;
+    box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
+    font-weight: bold;
+    font-family: nexa bold;
+    line-height: 1.5em;
+    margin: 1em auto auto 5em;
+    padding: .4375em 1.5em .5625em;
+    cursor: pointer;
+    transition: background-color .2s linear;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 1em;
+    display: block;
+
+}
+
+.beige {
+    background-color: #f3E5D8;
+    padding: 3em 1em 1em 1em;
+}
+
+.section2 {
+    background: #fff;
+    border-radius: 7px;
+    padding: 1em;
+    max-width: 30em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+
+}
+
+.section2 > h2 {
+    color: #2800A0;
+    font-size: 1.6rem;
+    padding-bottom: 0.3em;
+}
+
+footer {
+
 }
