@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     color: #000;
+    box-sizing: border-box;
 }
 
 p {
@@ -24,8 +25,13 @@ h1 {
 h2 {
     font-family: nexa bold, sans-serif;
     font-size: 1.5em;
-    font-size: 2em;
     color: #fff
+}
+
+h4 {
+    font-family: nexa bold, sans-serif;
+    font-size: 0.8em;
+    color: #000;
 }
 
 a {
@@ -58,17 +64,63 @@ nav ul li {
 }
 
 body {
-  background-image: url('images/achtergrondmobiel.jpg');
+    background-image: url('images/IMG_20190805_080218.jpg');
+    background-repeat: no-repeat;
 }
 
 main {
-    flex-grow: 2;
+
 }
 
 section {
-
+    padding-top: 1em;
 }
 
+header {
+    margin: 0 auto;
+    margin-bottom: 1em;
+    max-width: 75em;
+    display: block;
+}
+
+/*prijs*/
+article:first-of-type {
+    background-color: rgba(0, 214, 108, 0.7);
+    border-radius: 7px;
+    max-width: 20em;
+    font-size: 1em;
+    padding: 1em;
+    margin: 1em auto auto auto;
+}
+
+/*voorkeur*/
+article:nth-of-type(2) {
+    background-color: #2800A0;
+    border-radius: 7px;
+    max-width: 20em;
+    padding: 1em;
+    margin: 1em auto 1em auto;
+}
+/*midden*/
+article:nth-of-type(3) {
+    background-color: #fff;
+    border-radius: 7px;
+    max-width: 20em;
+    font-size: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+    margin: auto auto auto auto;
+}
+
+.voorkeur {
+        color: #2800A0;
+}
+
+.midden {
+    color: #fff;
+}
+
+/*
 .prijs {
     background-color: rgba(0, 214, 108, 0.7);
     border-radius: 7px;
@@ -78,9 +130,7 @@ section {
     margin: 1em auto auto auto;
 }
 
-.prijs p {
-    color: #fff;
-}
+
 
 .voorkeur {
     background-color: #2800A0;
@@ -90,13 +140,7 @@ section {
     margin: 1em auto auto auto;
 }
 
-.voorkeur p {
-        color: #fff;
-}
 
-header {
-    padding: 1em;
-}
 
 .midden {
     background-color: #fff;
@@ -107,6 +151,7 @@ header {
     margin-bottom: 1em;
     margin: auto auto auto auto;
 }
+*/
 
 button {
     border-radius: 1.25em;
@@ -126,12 +171,10 @@ button {
     margin: 0 auto;
     margin-top: 1em;
     display: block;
-
 }
 
 .beige {
     background-color: #f3E5D8;
-    padding: 3em 1em 1em 1em;
 }
 
 .section2 {
@@ -139,8 +182,7 @@ button {
     border-radius: 7px;
     padding: 1em;
     max-width: 30em;
-    margin: 0 auto;
-    margin-bottom: 1em;
+    margin: 1em;
 
 }
 
@@ -151,5 +193,107 @@ button {
 }
 
 footer {
+    background-color: #F7F7F7;
+    padding-top: 1em;
+    margin: 0 auto;
+}
+footer nav ul{
+    background-color: #F7F7F7;
+    padding-top: 1em;
+    padding-left: 1em;
+    text-decoration: none;
+    display: block;
+}
+
+footer nav ul li{
+    margin: 0;
+    line-height: 1em;
+    display: block;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: nexa bold;
+    color: #606060;
+    font-size: 0.6em;
+}
+
+@media (min-width: 35em) {
+    body {
+    background-image: url('images/header-week39-logo%20(1).jpg');
+}
+        section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        padding-top: 1em;
+    }
+
+    .section2 {
+        display: flex;
+        margin: 1em 1em 0auto 1em;
+    }
+
+}
+
+
+
+@media (min-width: 55em) {
+
+
+    body {
+        background-image: url('images/header-week39-logo%20(2).jpg');
+background-repeat: no-repeat;
+    }
+
+    header {
+        align-content: center;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    /*prijs*/
+    header > article:first-of-type {
+        display: inline-grid;
+        grid-column: 1/3;
+        height: 15em;
+    }
+
+    /*voorkeur*/
+    article:nth-of-type(2) {
+        display: inline-grid;
+        grid-column: 2/3;
+        height: 15em;
+    }
+
+    /*midden*/
+    article:nth-of-type(3) {
+        display: inline-grid;
+        grid-column: 3/3;
+        height: 15em;
+    }
+
+    section {
+        align-content: center;
+        margin: 0 auto;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+
+    .section2 {
+        grid-auto-rows: 1;
+        display: flex;
+        margin: 0auto 1em 1em 1em;
+        flex-direction: column;
+}
+    }
+
 
 }
