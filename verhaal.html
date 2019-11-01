@@ -78,6 +78,28 @@
             <section class="detail">
                 <!--begin artikel-->
                 <article>
+
+                    <button onclick="playVid()" type="button">Play Video</button>
+                    <button onclick="pauseVid()" type="button">Pause Video</button><br>
+
+                    <video id="myVideo">
+                      <source src='css/images/paranoia.mp3' type="video/mp4">
+                      <source src="mov_bbb.ogg" type="video/ogg">
+                      Your browser does not support HTML5 video.
+                    </video>
+
+                    <script>
+                    var vid = document.getElementById("myVideo");
+
+                    function playVid() {
+                      vid.play();
+                    }
+
+                    function pauseVid() {
+                      vid.pause();
+                    }
+                    </script>
+
                     <title>Verhaal 50: Gefrustreerd</title>
                     <h1>Stijloefeningen (50) – Gefrustreerd</h1>
 

@@ -253,6 +253,11 @@ button {
     background-color: #f3E5D8;
 }
 
+/*hoogte aanpassen voor geluid buttons*/
+#myVideo{
+    height: 1em;
+}
+
 /*elke section krijgt deze class mee in dit geval de verhalen die je kunt lezen*/
 .section2 {
     background: #fff;
