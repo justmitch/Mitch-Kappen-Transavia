@@ -1,3 +1,4 @@
+/*voor alles in mijn html*/
 * {
     font-family: nexa light, sans-serif;
     font-size: 1em;
@@ -9,6 +10,7 @@
     box-sizing: border-box;
 }
 
+/*alle paragrafen*/
 p {
     font-family: nexa light, sans-serif;
     font-size: 1em;
@@ -16,39 +18,54 @@ p {
     line-height: 1.5em;
 }
 
+/*alle grote headings*/
 h1 {
     font-family: nexa bold, sans-serif;
     font-size: 2em;
     color: rgba(0, 214, 108, 0.9);
 }
 
+/*de op 2 na grootste headings*/
 h2 {
     font-family: nexa bold, sans-serif;
     font-size: 1.5em;
     color: #fff
 }
 
+/*h4 voor in forums en footers, h3 is voor als er subparagrafen worden geschreven dat in dit geval niet nodig is*/
 h4 {
     font-family: nexa bold, sans-serif;
-    font-size: 0.8em;
+    font-size: 1.2em;
     color: #000;
 }
 
+/*voor alle ankers*/
 a {
     text-decoration: none;
 }
 
+/*voor de heads, vooral eerste "section"*/
 head {
     max-width: 100%;
     display: flex;
     padding-left: 15px;
 }
 
-nav{
+/*geld voor elk element in de navigatie*/
+nav {
     max-height: 3em;
     background-color: #fff;
 }
 
+/*alle lijsten met anker*/
+li a {
+    list-style: none;
+    padding: 0;
+    font-family: nexa bold;
+    color: rgb(0, 214, 108);
+}
+
+/*nog specifieker aanroepen van de navigatie elementen*/
 nav ul li {
     list-style: none;
     padding: 0;
@@ -59,41 +76,118 @@ nav ul li {
     color: rgb(0, 214, 108);
 }
 
-.verhalen {
+/*class voor de navigatie zodat alles naast elkaar komt te staan*/
+.navi {
     display: flex;
 }
 
+/*alles binnen de body*/
 body {
-    background-image: url('images/IMG_20190805_080218.jpg');
+    background-image: url('images/achtergrond3.jpg');
     background-repeat: no-repeat;
 }
 
-main {
-
-}
-
+/*elke section*/
 section {
     padding: 1em;
     align-content: center;
-        margin: 0 auto;
-        justify-content: space-between;
-        grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
-        grid-gap: 1rem;
-        padding: 1rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    top: 0 auto;
+}
+
+/*class meegegeven voor de tekst op de detailpagina*/
+.detail {
+    padding: 1em;
+    align-content: center;
+    margin: 0 auto;
+    justify-content: space-between;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    top: 0 auto;
+    background-color: #f3E5D8;
+}
+
+/*https://stackoverflow.com/questions/2757483/limiting-the-number-of-characters-per-line-with-css*/
+.detail p {
+    max-width: 70ch;
+}
+
+/*specifieke aanroeping voor de h1 om een effect toe te voegen*/
+/*//codepen: https://codepen.io/zitrusfrisch/pen/fjbal*/
+.detail h1 {
+    letter-spacing: 0;
+    padding: .25em 0 .325em;
+    display: block;
+    margin: 0 auto;
+    text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+
+    /* Clip Background Image */
+
+    background: url('images/achtergrondmobiel.jpg') repeat-x;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Animate Background Image */
+
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 70s linear infinite;
+
+    /* Activate hardware acceleration for smoother animations */
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
 
 }
 
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/*elke article in een section om mee te schalen*/
+section article {
+    display: flex;
+    flex-direction: column;
+}
+
+section article a {
+    margin-top: auto;
+    margin-bottom: 1em;
+}
+
+/*maximale breedte meegeven aan de header (de 3 verhalen)*/
 header {
     margin: 0 auto;
     margin-bottom: 1em;
     max-width: 75em;
     display: block;
+    margin-top: 1em;
 }
 
-/*prijs
-article:first-of-type {
-    background-color: rgba(0, 214, 108, 0.7);
+/*ook nth of type proberen te gebruiken maar dat was niet specifiek genoeg dus
+uiteindelijk gekozen om de bovenste 3 artikelen een class te geven*/
+.wit {
+    background-color: rgba(0, 214, 108);
     border-radius: 7px;
     max-width: 20em;
     font-size: 1em;
@@ -101,55 +195,23 @@ article:first-of-type {
     margin: 1em auto auto auto;
 }
 
-/*voorkeur
-article:nth-of-type(2) {
+
+/*laatste artikel in header*/
+.blauw {
     background-color: #2800A0;
     border-radius: 7px;
     max-width: 20em;
     padding: 1em;
     margin: 1em auto 1em auto;
 }
-/*midden
-article:nth-of-type(3) {
-    background-color: #fff;
-    border-radius: 7px;
-    max-width: 20em;
-    font-size: 1em;
-    padding: 1em;
-    margin-bottom: 1em;
-    margin: auto auto auto auto;
-}
-*/
-.voorkeur {
-        color: #2800A0;
-}
 
-.midden {
+.blauw p {
     color: #fff;
 }
 
-.prijs {
-    background-color: rgba(0, 214, 108, 0.7);
-    border-radius: 7px;
-    max-width: 20em;
-    font-size: 1em;
-    padding: 1em;
-    margin: 1em auto auto auto;
-}
 
-
-
-.voorkeur {
-    background-color: #2800A0;
-    border-radius: 7px;
-    max-width: 20em;
-    padding: 1em;
-    margin: 1em auto 1em auto;
-}
-
-
-
-.midden {
+/*2e artikel in header*/
+.groen {
     background-color: #fff;
     border-radius: 7px;
     max-width: 20em;
@@ -159,39 +221,12 @@ article:nth-of-type(3) {
     margin: auto auto auto auto;
 }
 
-/*
-.prijs {
-    background-color: rgba(0, 214, 108, 0.7);
-    border-radius: 7px;
-    max-width: 20em;
-    font-size: 1em;
-    padding: 1em;
-    margin: 1em auto auto auto;
+.groen h2 {
+    color: rgba(0, 214, 108, 0.7);
+    ;
 }
 
-
-
-.voorkeur {
-    background-color: #2800A0;
-    border-radius: 7px;
-    max-width: 20em;
-    padding: 1em;
-    margin: 1em auto auto auto;
-}
-
-
-
-.midden {
-    background-color: #fff;
-    border-radius: 7px;
-    max-width: 20em;
-    font-size: 1em;
-    padding: 1em;
-    margin-bottom: 1em;
-    margin: auto auto auto auto;
-}
-*/
-
+/*button stijl onder elke tekst*/
 button {
     border-radius: 1.25em;
     min-height: 1.5rem;
@@ -208,21 +243,22 @@ button {
     transition: background-color .2s linear;
     text-decoration: none;
     margin: 0 auto;
-    margin-top: 1em;
-    display: block;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.beige {
+/*achtergrondkleur bij verhalen/home*/
+.achtergrond {
     background-color: #f3E5D8;
 }
 
+/*elke section krijgt deze class mee in dit geval de verhalen die je kunt lezen*/
 .section2 {
     background: #fff;
     border-radius: 7px;
     padding: 1em;
-/*    max-width: 30em;*/
     margin: 1em;
-
 }
 
 .section2 > h2 {
@@ -231,23 +267,23 @@ button {
     padding-bottom: 0.3em;
 }
 
+/*stijling voor de footer*/
 footer {
     background-color: #F7F7F7;
-    padding-top: 1em;
-    margin: 0 auto;
 }
-footer nav ul{
+
+footer nav ul {
     background-color: #F7F7F7;
     padding-top: 1em;
     padding-left: 1em;
     text-decoration: none;
-    display: block;
+    display: grid;
+    justify-content: center;
 }
 
-footer nav ul li{
+footer nav ul li {
     margin: 0;
-    line-height: 1em;
-    display: block;
+    line-height: 1.3em;
 }
 
 footer a {
@@ -257,11 +293,99 @@ footer a {
     font-size: 0.6em;
 }
 
+/*stijl voor de inschrijfmail die getriggert wordt als je muis buiten de content gaat*/
+.mouse-out .article-container {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 1s cubic-bezier(.5, 0, 1, .5);
+    transition: all 1s cubic-bezier(.5, 0, 1, .5);
+}
+
+.article-container {
+    -webkit-transition: all 3s .5s cubic-bezier(0, 1, .3, 1);
+    transition: all 3s .5s cubic-bezier(0, 1, .3, 1);
+}
+
+.modal {
+    background-color: rgb(149, 188, 188);
+    max-width: 25em;
+    padding: 1em;
+    margin: 0.7em;
+    opacity: 0;
+    -webkit-transform: scale(0) rotateX(30deg) translateY(10em);
+    transform: scale(0) rotateX(30deg) translateY(10em);
+    -webkit-transition: opacity .2s .3s ease-out,
+        -webkit-transform .5s cubic-bezier(1, 0, .3, 1);
+    transition: opacity .2s .3s ease-out,
+        -webkit-transform .5s cubic-bezier(1, 0, .3, 1);
+    transition: transform .5s cubic-bezier(1, 0, .3, 1),
+        opacity .2s .3s ease-out;
+    transition: transform .5s cubic-bezier(1, 0, .3, 1),
+        opacity .2s .3s ease-out,
+        -webkit-transform .5s cubic-bezier(1, 0, .3, 1);
+}
+
+.mouse-out .modal {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: opacity .2s .6s ease-out,
+        -webkit-transform 1s .3s cubic-bezier(1, 0, .3, 1.5);
+    transition: opacity .2s .6s ease-out,
+        -webkit-transform 1s .3s cubic-bezier(1, 0, .3, 1.5);
+    transition: transform 1s .3s cubic-bezier(1, 0, .3, 1.5),
+        opacity .2s .6s ease-out;
+    transition: transform 1s .3s cubic-bezier(1, 0, .3, 1.5),
+        opacity .2s .6s ease-out,
+        -webkit-transform 1s .3s cubic-bezier(1, 0, .3, 1.5);
+}
+
+#subscribe-email {
+    padding: 0.3em;
+}
+
+.button:hover {
+    text-decoration: none;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+form .button {
+    padding: 0.3em;
+    margin-top: 0.2em;
+}
+
+.modal {
+    background: -webkit-linear-gradient(top, #888881, #177777);
+    background: linear-gradient(to bottom, #888881, #177777);
+    border-radius: 2em;
+    left: calc(50% -);
+    position: fixed;
+    top: calc(50% - 200px);
+
+}
+
+.modal h2 {
+    color: #333;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.modal p {
+    color: #333;
+    margin: 1em;
+}
+
+/*responsive maken bij minimale breedte van 35em*/
 @media (min-width: 35em) {
     body {
-    background-image: url('images/header-week39-logo%20(1).jpg');
-}
-        section {
+        background-image: url('images/achtergrondmobiel.jpg');
+
+    }
+
+    section {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -280,38 +404,23 @@ footer a {
         margin: 0;
     }
 
-        .section2 > h2 {
+    .section2 > h2 {
         grid-row: 1/2;
     }
 
-       .section2 > p {
+    .section2 > p {
         grid-row: 2/3;
     }
-   .section2 > button {
+
+    .section2 > button {
         grid-row-end: 3/4;
     }
 
 }
-/*
-    section {
-        align-content: center;
-        margin: 0 auto;
-        justify-content: space-between;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        grid-gap: 1rem;
-        padding: 1rem;
-    }
-
-    .section2 {
-        grid-auto-rows: 1;
-        display: flex;
-        margin: 0auto 1em 1em 1em;
-        flex-direction: column;
-}
-*/
 
 
+
+/*responsive maken bij minimale breedte van 55em*/
 @media (min-width: 55em) {
 
 
@@ -326,48 +435,65 @@ background-repeat: no-repeat;
         margin: 0 auto;
     }
 
-    /*prijs
-    header > article:first-of-type {
-        display: inline-grid;
-        grid-column: 1/3;
-        height: 15em;
+
+    .wit {
+        background-color: rgba(0, 214, 108, 0.7);
+        border-radius: 7px;
+        max-width: 20em;
+        font-size: 1em;
+        padding: 1em;
+        margin: 1em auto auto auto;
+        height: 19em;
     }
 
-    /*voorkeur
-    header > article:nth-of-type(2) {
+
+
+    .blauw {
+        background-color: #2800A0;
+        border-radius: 7px;
+        max-width: 20em;
+        padding: 1em;
+        margin: 1em auto 1em auto;
+        height: 19em;
+    }
+
+    .blauw p {
+        color: #fff;
+    }
+
+    .blauw {
         display: inline-grid;
         grid-column: 2/3;
-        height: 15em;
     }
 
-    /*midden
-    header > article:nth-of-type(3) {
+    .groen {
+        background-color: #fff;
+        border-radius: 7px;
+        max-width: 20em;
+        font-size: 1em;
+        padding: 1em;
+        margin-bottom: 1em;
+        margin: auto auto auto auto;
+        height: 19em;
+    }
+
+    .groen h2 {
+        color: rgba(0, 214, 108, 0.7);
+    }
+
+    /*apparte scheiding van naastelkaar zetten, voor mezelf duidelijker*/
+    .groen {
         display: inline-grid;
         grid-column: 3/3;
-        height: 15em;
+
     }
-*/
-    .prijs {
+
+    /*apparte scheiding van naastelkaar zetten, voor mezelf duidelijker*/
+    .wit {
         display: inline-grid;
         grid-column: 1/3;
 
-}
-
-
-
-.voorkeur {
- display: inline-grid;
-        grid-column: 2/3;
-
-}
-
-
-
-.midden {
- display: inline-grid;
-        grid-column: 3/3;
-
-}
+    }
 
     section {
         align-content: center;
@@ -386,6 +512,17 @@ background-repeat: no-repeat;
         flex-direction: column;
         max-width: 30em;
         justify-self: bottom;
+    }
+
+    /*over een grotere breedte is het beter als de inschrijfaanvraag
+    ergens anders staat om beter op te vallen*/
+    .modal {
+        background: -webkit-linear-gradient(top, #888881, #177777);
+        background: linear-gradient(to bottom, #888881, #177777);
+        border-radius: 2em;
+        left: calc(54% - -123px);
+        position: fixed;
+        top: calc(50% - 200px);
     }
 }
 

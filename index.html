@@ -1,156 +1,164 @@
+<!--begin html document-->
 <html lang="en">
 
 <!--begin van de head-->
-
 <head>
     <!--<meta charset="UTF-8"-->
     <meta name="viewport" content="width=device-width" />
     <title>Transavia Verhalen</title>
+    <!--inladen van javascript-->
+    <!--https://stackoverflow.com/questions/13739568/how-do-i-link-a-javascript-file-to-a-html-file-->
+<!--
+    <script src="./javascripts/rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax('.rellax', {
+            center: true
+        });
+        var rellaxNonCentered = new Rellax('.rellax-non-centered', {
+            center: false
+        });
+    </script>
+-->
+    <!--bron: codepen | geadviseerd om mee te nemen in de code om extra functies in te laden als dat nodig mocht zijn-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!--script die kijkt of je cursor nog aanwezig is op de pagina-->
+    <script src="javascripts/mouseleave.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-       <!-- nac sticky maken: position fixed + Z-index en tegen main/section zeggen position relative-->
-        <nav class="verhalen">
-            <ul class="verhalen" role="navigation">
-                <li><a class="home"></a>Home</li>
-                <li><a class="verhalen"></a>Verhalen</li>
-                <li><a class="contact"></a>Contact</li>
-            </ul>
-        </nav>
-</head>
 
+    <!--start navigatie | eventuele overweging om navigatie aan te passen: nav sticky maken: position fixed + Z-index en tegen main/section zeggen position relative-->
+    <nav>
+        <ul class="navi" role="navigation">
+            <!--begin list items-->
+            <li><a href="index.html" class="home">Home</a></li>
+            <li><a href="verhaal.html" class="">Verhalen</a></li>
+            <li><a class="contact"></a>Contact</li>
+            <!--einde list items-->
+        </ul>
+        <!--einde ongeordende list-->
+    </nav>
+    <!--einde top-navigatie-->
+</head>
+<!--einde head-->
+<!--begin body-->
 <body>
     <main>
-       <header>
-<!--
-            <article>
+       <!--begin main-->
+        <!--begin header-->
+        <header>
+            <!--begin van bovenste 3 artikelen-->
+            <article class="groen">
                 <h2>Stijloefeningen (50) – Gefrustreerd</h2>
                 <p> Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over
                     het stationsplein. Ik wil ze vertrappen onder m’n schoenen. Vermorzelen.
-                    Verbrijzelen.  ...
+                    Verbrijzelen. ...
                 </p>
-                <a href="#"><button type="button">lees verder</button></a>
+                <a href="verhaal.html"><button type="button">lees verder</button></a>
             </article>
-            <article>
-                <h2>Stijloefeningen (87) – Code</h2><br />
-                <p class="midden">In kwellende situaties toveren apen pennenvruchten uit invloedrijke
-                 tapijthandelaren. De engelen buigen uitermate succesvol en negeren
-                 langzaam onze overrijpe politieke ...
-                </p>
-                <a href="#"><button type="button">lees verder</button></a>
-            </article>
-            <article>
-               <h2 class="voorkeur">Stijloefeningen (65) – Recept</h2>
-                <p>Dit gerecht is vrij eenvoudig te maken. Ideaal op een doordeweekse dag
-                als je even niet weet wat je met het leven aan moet. Als je wel weet wat
-                je met het leven aan moet, is dit gerecht ...</p>
-                <a href="#"><button type="button">lees verder</button></a>
-            </article>
--->
-            <article class="midden">
-                <h1>Stijloefeningen (50) – Gefrustreerd</h1>
-                <p> Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over
-                    het stationsplein. Ik wil ze vertrappen onder m’n schoenen. Vermorzelen.
-                    Verbrijzelen.  ...
-                </p>
-                <a href="#"><button type="button">lees verder</button></a>
-            </article>
-            <article class="prijs">
-                <h2>Stijloefeningen (87) – Code</h2><br />
+            <article class="wit">
+                <h2>Stijloefeningen (87) – Code</h2>
                 <p>In kwellende situaties toveren apen pennenvruchten uit invloedrijke
-                 tapijthandelaren. De engelen buigen uitermate succesvol en negeren
-                 langzaam onze overrijpe politieke overlevingstrategieën. Verveelde ...
+                    tapijthandelaren. De engelen buigen uitermate succesvol en negeren
+                    langzaam onze overrijpe politieke overlevingstrategieën. Verveelde ...
                 </p>
                 <a href="#"><button type="button">lees verder</button></a>
             </article>
-            <article class="voorkeur">
-               <h2>Stijloefeningen (65) – Recept</h2>
+            <article class="blauw">
+                <h2>Stijloefeningen (65) – Recept</h2>
                 <p>Dit gerecht is vrij eenvoudig te maken. Ideaal op een doordeweekse dag
-                als je even niet weet wat je met het leven aan moet. Als je wel weet wat
-                je met het leven aan moet, is dit gerecht ...</p>
+                    als je even niet weet wat je met het leven aan moet. Als je wel weet wat
+                    je met het leven aan moet, is dit gerecht ...</p>
                 <a href="#"><button type="button">lees verder</button></a>
             </article>
+            <!--einde artikelen-->
         </header>
-
-        <!--elke section moet een heading krijgen-->
-        <section class="beige">
+        <!--einde header-->
+        <!--begin heading-->
+        <!--elke section moet een heading krijgen als advies meegekregen maar had het niet nodig?-->
+        <!--begin van nieuwe sectie om te stijlen-->
+        <section class="achtergrond">
+            <!--begin artikelen die gelezen kunnen worden-->
             <article id="section1" class="section2">
                 <h2>Stijloefeningen (64) – Leon de Winter</h2>
                 <p>De wind en de regen deden hun verwoestende werk toen ik, met voor
-                mij in zijn kinderwagen onze slapende zoon, onze lieve, dappere Moos,
-                de bus uitstapte. De donkere wolken die boven Amsterdam samenpakten ...</p>
+                    mij in zijn kinderwagen onze slapende zoon, onze lieve, dappere Moos,
+                    de bus uitstapte. De donkere wolken die boven Amsterdam samenpakten ...</p>
                 <a href="#"><button type="button">lees verder</button></a>
             </article>
 
             <article id="section2" class="section2">
                 <h2>Stijloefeningen (61) – Sportcommentaar</h2>
                 <p>En daar stopt lijn 21 op exact de juiste tijd op precies de juiste
-                plek op het Stationsplein. De deuren gaat open, de spanning is te
-                snijden. En wie komt daar als eerste uit? Ja hoor, ...</p>
+                    plek op het Stationsplein. De deuren gaat open, de spanning is te
+                    snijden. En wie komt daar als eerste uit? Ja hoor, ...</p>
                 <a href="#"><button class="button" type="button">lees verder</button></a>
             </article>
 
             <article id="section3" class="section2">
                 <h2>Stijloefeningen (99) – Verrassing</h2>
                 <p>- ‘Biertje dan maar?’ – ‘Graag.’ – ‘Vermoeiende dag?’ – ‘Nah. Naar
-                de bilbiotheek geweest. Met de bus.’ – ‘Gaat daar een bus naartoe?’
-                – ‘De bus stopt op het stationsplein.’ – ‘Ah. En vandaar moet je lopen?’
-                – ‘Ja, ik was met mijn zoon. Die sliep in zijn kinderwagen.’ ...</p>
+                    de bilbiotheek geweest. Met de bus.’ – ‘Gaat daar een bus naartoe?’
+                    – ‘De bus stopt op het stationsplein.’ – ‘Ah. En vandaar moet je lopen?’
+                    – ‘Ja, ik was met mijn ...</p>
                 <a href="#"><button class="button" type="button">lees verder</button></a>
             </article>
 
             <article id="section4" class="section2">
                 <h2>Stijloefeningen (98) – Beroemd</h2>
                 <p>Vlak voordat ik de bus uitstap bedank ik de buschauffeur via de spiegel
-                 voor zijn diensten. Hij zwaait joviaal terug. ‘Mijn vrouw is een groot
-                 fan van u’, roept hij. ‘Doe haar de groeten’, zeg ik en stap uit. Centraal ...</p>
+                    voor zijn diensten. Hij zwaait joviaal terug. ‘Mijn vrouw is een groot
+                    fan van u’, roept hij. ‘Doe haar de groeten’, zeg ik en stap uit. Centraal ...</p>
                 <a href="#"><button class="button" type="button">lees verder</button></a>
             </article>
 
             <article id="section5" class="section2">
                 <h2>Stijloefeningen (96) – Steenkolenfrans</h2>
                 <p>Le premier fevrièr 2011. Presque midi. Le bus s’arrête. Ligne 21.
-                Place de Gare Centrale. Je marche au derrière d’un poussette. Mon fils
-                dort. Je suis en route au Bibliothèque Public pour ...</p>
+                    Place de Gare Centrale. Je marche au derrière d’un poussette. Mon fils
+                    dort. Je suis en route au Bibliothèque Public pour ...</p>
                 <a href="#"><button class="button" type="button">lees verder</button></a>
             </article>
 
             <article id="section6" class="section2">
                 <h2>Stijloefeningen (95) – Martin Bril</h2>
                 <p>Centraal Station. Iedereen gaat er naartoe, niemand moet er zijn.
-                 Behalve om verder te reizen. Ik stap uit de bus, lijn 21. Van
-                 Geuzenveld naar Centraal Station. Mijn zoon slaapt in ...</p>
+                    Behalve om verder te reizen. Ik stap uit de bus, lijn 21. Van
+                    Geuzenveld naar Centraal Station. Mijn zoon slaapt in ...</p>
                 <a href="#"><button class="button" type="button">lees verder</button></a>
             </article>
 
             <article id="section7" class="section2">
                 <h2>Stijloefeningen (93) – Nico Dijkshoorn die Mart Smeets imiteert</h2>
                 <p>Noot vooraf: de heer Nico Dijkshoorn hecht eraan te melden dat hij
-                 onderstaande niet heeft geschreven. Ik stap uit een, ja wat is het
-                 eigenlijk?, een bus. Lijn 21? Zou ...</p>
+                    onderstaande niet heeft geschreven. Ik stap uit een, ja wat is het
+                    eigenlijk?, een bus. Lijn 21? Zou ...</p>
                 <a href="#"><button class="button" type="button">lees verder</button></a>
             </article>
 
             <article id="section8" class="section2">
                 <h2>Stijloefeningen (92) – Vergezocht</h2>
                 <p>Het was in de omstreken van een gure februaridag rond het middaguur.
-                 Mijn zoon lag in zijn kinderwagen te slapen als een oude jamaicaan
-                 die teveel Rum achter de ontbrekende ...</p>
+                    Mijn zoon lag in zijn kinderwagen te slapen als een oude jamaicaan
+                    die teveel Rum achter de ontbrekende ...</p>
                 <a href="#"><button class="button" type="button">lees verder</button></a>
             </article>
 
             <article id="section9" class="section2">
                 <h2>Stijloefeningen (91) – Zoon</h2>
                 <p>Vroem. Tuut tuut. Whèèèh!! Die! Die! Whèèèh! Die! Die! Hjumhjumhjum.
-                 Zzzzzzzzzz.* Zzzzzzz.** Zzzzzzz. Hjumhjumhjum. Zzzzzzz. Grumbl.
-                 Huh? Whèèèh. Die! Die!  ...</p>
+                    Zzzzzzzzzz.* Zzzzzzz.** Zzzzzzz. Hjumhjumhjum. Zzzzzzz. Grumbl.
+                    Huh? Whèèèh. Die! Die! ...</p>
                 <a href="#"><button class="button" type="button">lees verder</button></a>
             </article>
+            <!--einde artikelen-->
+        <!--einde section-->
         </section>
-
+        <!--begin footer-->
         <footer class="footer">
-
+            <!--begin 2e navigatie-->
             <nav>
+                <!--begin ongeordende list-->
                 <ul role="navigation">
-                    <h4>Spring naar de inleiding van verhalen</h4>
+                    <h4>Lees meer verhalen</h4>
                     <li><a href="midden">Ga naar "Gefrustreerd"</a></li>
                     <li><a href="prijs">Ga naar "Code"</a></li>
                     <li><a href="#voorkeur">Ga naar "Recept"</a></li>
@@ -163,11 +171,35 @@
                     <li><a href="#section7">Ga naar "Nico Dijkshoorn die Mart Smeets imiteert"</a></li>
                     <li><a href="#section8">Ga naar "Vergezocht"</a></li>
                     <li><a href="#section9">Ga naar "Zoon"</a></li>
-                    <li><a href="#"><img src="css/images/transavia-logo.svg"/></a></li>
+                    <li><a href="#"><img src="css/images/transavia-logo.svg" /></a></li>
                 </ul>
+                <!--einde list-->
+            <!--einde 2e navigatie-->
             </nav>
+        <!--einde footer-->
         </footer>
+    <!--einde main-->
     </main>
-</body>
 
+    <!--als je met je cursor buiten het beeld gaat krijg je de optie om je in te schrijven om wekelijks een verhaal te ontvangen-->
+    <div class="modal-container">
+        <article class="modal">
+            <h2>Ontvang elke week een verhaal</h2>
+            <p>Schrijf je in en ontvang elke week een random verhaal om te lezen! :)</p>
+            <form action="https://www.getrevue.co/profile/cssanimation/add_subscriber" method="post">
+                <input id="subscribe-email" type="email" value="" placeholder="Your email" name="member[email]" class="email">
+                <input type="submit" name="member[subscribe]" class="button" value="Subscribe">
+            </form>
+            <p><a href="#" class="close" id="close-modal">No thanks</a></p>
+        </article>
+    <!--einde div modal-->
+    </div>
+<!--einde body-->
+</body>
+<!--einde html-->
 </html>
+<!--gebruikte bronnen-->
+<!--https://css-tricks.com/aos-css-driven-scroll-animation-library/-->
+<!--https://codepen.io/justmitch/pen/jOOaLox-->
+<!--https://github.com/scrollreveal/scrollreveal-->
+<!--https://css-tricks.com/aos-css-driven-scroll-animation-library/-->
