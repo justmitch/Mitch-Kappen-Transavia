@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--begin html document-->
 <html lang="en">
 
@@ -8,82 +9,80 @@
     <title>Transavia Verhalen</title>
     <!--inladen van javascript-->
     <!--    https://stackoverflow.com/questions/13739568/how-do-i-link-a-javascript-file-to-a-html-file-->
-<!--
-    <script src="./javascripts/rellax.min.js"></script>
-    <script>
-        var rellax = new Rellax('.rellax', {
-            center: true
-        });
-        var rellaxNonCentered = new Rellax('.rellax-non-centered', {
-            center: false
-        });
-    </script>
--->
-    <!--bron: codepen | geadviseerd om mee te nemen in de code om extra functies in te laden als dat nodig mocht zijn-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!--script die kijkt of je cursor nog aanwezig is op de pagina-->
-    <script src="javascripts/mouseleave.js"></script>
+
+    <!--link css-->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
-    <!--start navigatie | eventuele overweging om navigatie aan te passen: nav sticky maken: position fixed + Z-index en tegen main/section zeggen position relative-->
-    <nav>
-        <ul class="navi" role="navigation">
-            <!--begin list items-->
-            <li><a href="index.html" class="home">Home</a></li>
-            <li><a href="#"></a>Verhalen</li>
-            <li><a class="contact"></a>Contact</li>
-            <!--einde list items-->
-        </ul>
-        <!--einde ongeordende list-->
-    </nav>
-    <!--einde top-navigatie-->
+
 </head>
 <!--einde head-->
 <!--begin body-->
 <body>
+   <!--start navigatie | Nav moet in de body eventuele overweging om navigatie aan te passen: nav sticky maken: position fixed + Z-index en tegen main/section zeggen position relative-->
+    <nav>
+                <ul class="navi">
+                    <!--begin list items-->
+                    <li><a href="index.html" class="home">Home</a></li>
+                    <li><a href="verhaal.html" class="">Verhalen</a></li>
+                    <li><a class="#"></a>Contact</li>
+                    <!--einde list items-->
+                </ul>
+        <!--einde ongeordende list-->
+    </nav>
+    <!--einde top-navigatie-->
     <!--begin main-->
-    <main>
+
         <!--begin header-->
-        <header>
+        <section>
             <!--begin van bovenste 3 artikelen-->
-            <article class="groen">
-                <h2>Stijloefeningen (50) – Gefrustreerd</h2>
-                <p> Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over
-                    het stationsplein. Ik wil ze vertrappen onder m’n schoenen. Vermorzelen.
-                    Verbrijzelen. ...
-                </p>
-                <a href="#"><button type="button">lees verder</button></a>
-            </article>
-            <article class="wit">
-                <h2>Stijloefeningen (87) – Code</h2>
-                <p>In kwellende situaties toveren apen pennenvruchten uit invloedrijke
-                    tapijthandelaren. De engelen buigen uitermate succesvol en negeren
-                    langzaam onze overrijpe politieke overlevingstrategieën. Verveelde ...
-                </p>
-                <a href="#"><button type="button">lees verder</button></a>
-            </article>
-            <article class="blauw">
-                <h2>Stijloefeningen (65) – Recept</h2>
-                <p>Dit gerecht is vrij eenvoudig te maken. Ideaal op een doordeweekse dag
-                    als je even niet weet wat je met het leven aan moet. Als je wel weet wat
-                    je met het leven aan moet, is dit gerecht ...</p>
-                <a href="#"><button type="button">lees verder</button></a>
-            </article>
+        <article class="groen">
+           <header>
+            <h2>Stijloefeningen (50)</h2>
+             <h3>– Gefrustreerd</h3>
+            </header>
+            <p> Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over
+                het stationsplein. Ik wil ze vertrappen onder m’n schoenen. Vermorzelen.
+                Verbrijzelen. ...
+            </p>
+            <a href="verhaal.html"><button type="button">lees verder</button></a>
+        </article>
+        <article class="wit">
+           <header>
+            <h2>Stijloefeningen (87)</h2>
+            <h3> – Code</h3>
+            </header>
+            <p>In kwellende situaties toveren apen pennenvruchten uit invloedrijke
+                tapijthandelaren. De engelen buigen uitermate succesvol en negeren
+                langzaam onze overrijpe politieke overlevingstrategieën. Verveelde ...
+            </p>
+            <a href="#"><button type="button">lees verder</button></a>
+        </article>
+        <article class="blauw">
+           <header>
+            <h2>Stijloefeningen (65)</h2>
+            <h3> – Recept</h3>
+            </header>
+            <p>Dit gerecht is vrij eenvoudig te maken. Ideaal op een doordeweekse dag
+                als je even niet weet wat je met het leven aan moet. Als je wel weet wat
+                je met het leven aan moet, is dit gerecht ...</p>
+            <a href="#"><button type="button">lees verder</button></a>
+        </article>
             <!--einde artikelen-->
-        </header>
+        </section>
         <!--einde header-->
         <!--begin heading-->
-        <head>
+        <main>
             <!--begin section en class voor de tekst-->
             <section class="detail">
                 <!--begin artikel-->
                 <article>
+                   <header>
                     <!--audio en buttons toevoegen bron: https://www.youtube.com/watch?v=8fqqcGXJKp8-->
-                    <button onclick="playVid()" type="button">Play Video</button>
-                    <button onclick="pauseVid()" type="button">Pause Video</button><br>
+                    <button onclick="playVid()" type="button">Play Audio</button>
+                    <button onclick="pauseVid()" type="button">Pause Audio</button><br>
 
                     <video id="myVideo">
-                      <source src='css/images/paranoia.mp3' type="video/mp4">
+                      <source src='css/images/paranoia.mp3.mov' type="video/mp4">
                       <source src="mov_bbb.ogg" type="video/ogg">
                       Your browser does not support HTML5 video.
                     </video>
@@ -102,6 +101,7 @@
 
                     <title>Verhaal 50: Gefrustreerd</title>
                     <h1>Stijloefeningen (50) – Gefrustreerd</h1>
+                    </header>
 
                     <!--begin tekst verhaal-->
                     <p>Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over
@@ -168,27 +168,39 @@
             <!--einde section-->
             </section>
         <!--einde head-->
-        </head>
+
         <!--begin footer-->
-        <footer class="footer">
-            <!--2e navigatie voor de footer-->
-            <nav>
+<footer class="footer">
+            <!--begin 2e navigatie-->
+            <h2>Krijg elke week een nieuw verhaal van je favoriete genre toegestuurd</h2>
+            <form action="#">
+
+            <label for="Naam">Naam</label>
+            <input required type="text" class="field" placeholder="Voornaam, Achternaam">
+
+            <label for="email">E-mail</label>
+            <input required type="email" class="field" placeholder="naam@domein.nl">
+
+                <label for="genre" class="field"></label>
+                <span class="label-text">Favoriete Genre</span>
+                <select id="genre" name="genre" required>
+
+                    <option value="">Maak een keuze</option>
+                    <option value="Roman">Roman</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Humor">Humor</option>
+                    <option value="Fantasie">Fantasie</option>
+                    <option value="Biografie">Biografie</option>
+                    <option value="Oorlog">Oorlog</option>
+                    <option value="Detective">Detective</option>
+                    <option value="ScienceFiction">Science Fiction</option>
+                </select>
+                <input type="submit" value="verstuur">
+            </form>
+            <nav id="navfooter">
                 <!--begin ongeordende list-->
-                <ul role="navigation">
-                    <h4>Lees meer verhalen</h4>
-                    <li><a href="midden">Ga naar "Gefrustreerd"</a></li>
-                    <li><a href="prijs">Ga naar "Code"</a></li>
-                    <li><a href="#voorkeur">Ga naar "Recept"</a></li>
-                    <li><a href="section1">Ga naar "Leon de winter"</a></li>
-                    <li><a href="section2">Ga naar "Sportcommentaar"</a></li>
-                    <li><a href="#section3">Ga naar "Verrassing"</a></li>
-                    <li><a href="#section4">Ga naar "Beroemd"</a></li>
-                    <li><a href="#section5">Ga naar "Steenkolenfrans"</a></li>
-                    <li><a href="#section6">Ga naar "Martin Bril"</a></li>
-                    <li><a href="#section7">Ga naar "Nico Dijkshoorn die Mart Smeets imiteert"</a></li>
-                    <li><a href="#section8">Ga naar "Vergezocht"</a></li>
-                    <li><a href="#section9">Ga naar "Zoon"</a></li>
-                    <li><a href="#"><img src="css/images/transavia-logo.svg" /></a></li>
+                <ul>
+                    <li><a href="#"><img id="transavialogo" alt= "Transavia Logo" src="css/images/transavia-logo.svg" /></a></li>
                 </ul>
                 <!--einde list-->
             <!--einde 2e navigatie-->
@@ -198,6 +210,7 @@
     <!--einde main-->
     </main>
     <!--als je met je cursor buiten het beeld gaat krijg je de optie om je in te schrijven om wekelijks een verhaal te ontvangen-->
+<!--
      <div class="modal-container">
         <article class="modal">
             <h2>Ontvang elke week een verhaal</h2>
@@ -208,8 +221,9 @@
             </form>
             <p><a href="#" class="close" id="close-modal">No thanks</a></p>
         </article>
-    <!--einde div modal-->
+    einde div modal
     </div>
+-->
 <!--einde body-->
 </body>
 <!--einde html-->
