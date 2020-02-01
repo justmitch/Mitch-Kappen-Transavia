@@ -1,3 +1,5 @@
+/*Voor het maken van de filter heb ik de code van Joost gebruikt*/
+/*https://codepen.io/joostf/pen/MOxQex*/
 var body = document.querySelector('body');
 var btnFilterOpen = document.querySelector('header button');
 var btnFilterClose = document.querySelector('form button');
